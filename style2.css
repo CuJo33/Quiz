@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+}
+
+#Question1,
+#Question2,
+#Question3,
+#Question4,
+#Question5,
+#Results {
+  display: none;
+  width: 750px;
+}
+
+#QuizArea {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 500px;
+  width: 800px;
+  background-color: #ccc;
+  border-radius: 3px;
+}

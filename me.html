@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--required meta-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="style2.css" />
+  </head>
+
+  <body>
+    <div class="Container">
+      <div id="QuizArea">
+        <div id="Title">
+          <div class="col">
+            <h1 class="text-center">What kind of climber are you?</h1>
+            <br />
+          </div>
+        </div>
+
+        <div id="QuestionaireArea">
+          <!--intro content-->
+          <div id="Intro" class="justify-content-center mx-auto">
+            <h2 class="text-center">Find out which type of climber you are</h2>
+            <br />
+            <br />
+            <p class="text-center">Click on Start Quiz below to begin</p>
+            <br />
+            <br />
+            <input
+              type="button"
+              value="Start Quiz"
+              class="btn btn-success text-center"
+              onclick="StartQuiz()"
+            />
+          </div>
+
+          <!--Question 1-->
+          <div id="Question1" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-center">What is your body type?</h2>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <div class="col-4 justify-content-center">
+                <img
+                  src="1.jpg"
+                  alt="Ectomorph body type"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest1" id="A1" value="1" />
+                <label for="A1" class="text-center">Ectomorph</label>
+              </div>
+              <div class="col-4 justify-content-center">
+                <img
+                  src="2.png"
+                  alt="Endomorph body type"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest1" id="A2" value="0" />
+                <label for="A2">Endomorph</label>
+              </div>
+              <div class="col-4 justify-content-center">
+                <img
+                  src="3.png"
+                  alt="Mesomorph body type"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest1" id="A3" value="0" />
+                <label for="A3">Mesomorph</label>
+              </div>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <input
+                type="button"
+                value="Next"
+                class="btn btn-success mx-auto"
+                onclick="Question2()"
+              />
+            </div>
+          </div>
+
+          <!--Question 2-->
+          <div id="Question2" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-center">How do you deal with heights?</h2>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <div class="col-6 justify-content-center">
+                <img
+                  src="scared.jpg"
+                  alt="Man looking scared on the top of a building"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest2" id="A4" value="1" />
+                <label for="A4" class="text-center">I'm Scared</label>
+              </div>
+              <div class="col-6 justify-content-center">
+                <img
+                  src="chill.jpeg"
+                  alt="Man looking relaxed sat on the edge of a building overlooking a city"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest2" id="A5" value="1" />
+                <label for="A5">I'm Chill</label>
+              </div>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <input
+                type="button"
+                value="Next"
+                class="btn btn-success mx-auto"
+                onclick="Question3()"
+              />
+            </div>
+          </div>
+
+          <!--Question 3-->
+          <div id="Question3" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-center">
+                Do you prefer the Indoors or the Outdoors?
+              </h2>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <div class="col-6 justify-content-center">
+                <img
+                  src="indoors.jpg"
+                  alt="A woman in a medatative pose on a kitchen table"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest3" id="A6" value="1" />
+                <label for="A6" class="text-center">Indoors</label>
+              </div>
+              <div class="col-6 justify-content-center">
+                <img
+                  src="Outdoors.jpg"
+                  alt="Man sat outside of a tent in front of a large cliff face with a river running past"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest3" id="A7" value="1" />
+                <label for="A7">Outdoors</label>
+              </div>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <input
+                type="button"
+                value="Next"
+                class="btn btn-success mx-auto"
+                onclick="Question4()"
+              />
+            </div>
+          </div>
+
+          <!--Question 4-->
+          <div id="Question4" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-center">What do you specialise more in?</h2>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <div class="col-4 justify-content-center">
+                <img
+                  src="speed.jpg"
+                  alt="Usain bolt winning the 100m in the olympics"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest4" id="A8" value="1" />
+                <label for="A8" class="text-center">Speed</label>
+              </div>
+              <div class="col-4 justify-content-center">
+                <img
+                  src="endurance.jpg"
+                  alt="The brownlee brothers competing at the olympics in triathlon"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest4" id="A9" value="1" />
+                <label for="A9">Endurance</label>
+              </div>
+              <div class="col-4 justify-content-center">
+                <img
+                  src="power.jpg"
+                  alt="An olympic weightlifter lifting a new WR"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest4" id="A10" value="1" />
+                <label for="A10">Power</label>
+              </div>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <input
+                type="button"
+                value="Next"
+                class="btn btn-success mx-auto"
+                onclick="Question5()"
+              />
+            </div>
+          </div>
+
+          <!--Question 5-->
+          <div id="Question5" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-center">Enter a question</h2>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <div class="col-4 justify-content-center">
+                <img
+                  src="speed.jpg"
+                  alt="Usain bolt winning the 100m in the olympics"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest5" id="A8" value="1" />
+                <label for="A8" class="text-center">Speed</label>
+              </div>
+              <div class="col-4 justify-content-center">
+                <img
+                  src="endurance.jpg"
+                  alt="The brownlee brothers competing at the olympics in triathlon"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest5" id="A9" value="1" />
+                <label for="A9">Endurance</label>
+              </div>
+              <div class="col-4 justify-content-center">
+                <img
+                  src="power.jpg"
+                  alt="An olympic weightlifter lifting a new WR"
+                  width="200"
+                  height="200"
+                />
+                <br />
+                <input type="radio" name="Quest5" id="A10" value="1" />
+                <label for="A10">Power</label>
+              </div>
+            </div>
+            <br />
+            <div class="row" class="justify-content-center">
+              <input
+                type="button"
+                value="Next"
+                class="btn btn-success mx-auto"
+                onclick="Results()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- link to external JavaScript-->
+    <script src="quizCode.js" type="text/javascript"></script>
+  </body>
+</html>
