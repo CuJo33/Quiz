@@ -24,3 +24,11 @@ body {
   background-color: #ccc;
   border-radius: 3px;
 }
+
+/* 
+set class for the images
+set at 200 to begin with 
+ccs :hover
+
+nest imagine in the input element will make image clickable. 
+*/
