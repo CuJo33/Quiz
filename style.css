@@ -10,6 +10,7 @@ body {
 #Results {
   display: none;
   width: 750px;
+  height: 300px;
 }
 
 #QuizArea {
@@ -25,6 +26,23 @@ body {
   border-radius: 3px;
 }
 
+.forcehover {
+  height: 200px;
+  width: 200px;
+}
+
+.forcehover:hover {
+  height: 205px;
+  width: 205px;
+}
+
+.height {
+  height: 250px;
+}
+
+#changedimage {
+  height: 200px;
+}
 /* 
 set class for the images
 set at 200 to begin with 

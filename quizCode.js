@@ -4,8 +4,6 @@ let AnswerArray = [];
 
 // Finds out if the question is answered by comparing the current Question number to the amount of responses in the array
 function isAnwered(AnswerArray, QuestionNumber) {
-  console.log(AnswerArray);
-  console.log(AnswerArray.length);
   if (AnswerArray.length == QuestionNumber) {
     return true;
   } else {
@@ -65,39 +63,49 @@ function calculateResults() {
     if (AnswerArray[1] == 1) {
       //Indoor - scared = indoor bouldering
       msg = "You should be an Indoor Boulderer";
+      imglink = "indoorbouldering.jpg";
     } else if (AnswerArray[3] == 1) {
       //Indoor - Not scared - speed = Speed climbing
       msg = "You should be an Speed Climber";
+      imglink = "indoorspeed.jpg";
     } else if (AnswerArray[3] == 2) {
       msg = "You should be an Lead Climber";
+      imglink = "indoorlead.jfif";
     } else {
       // Indoor - Not scared - Power = indoor Boulding
       msg = "You should be an Indoor Boulderer";
+      imglink = "indoorbouldering.jpg";
     }
   } else {
     // Must now be outdoors
     if (AnswerArray[1] == 1) {
       // outdoor - scared  = outdoor bouldering
       msg = "You should be an Outdoor Boulderer";
+      imglink = "outdoorboulder.png";
     } else {
       // must now be outdoor - not scared
       if (AnswerArray[3] == 1) {
         //  outdoor - not scared - speed = outdoor free solo
         msg = "You should be an Outdoor Free Soloist";
+        imglink = "freesolo.jpg";
       }
       if (AnswerArray[3] == 2) {
         if (AnswerArray[4] == 3 || AnswerArray[4] == 2) {
           // outdoor - not scared - endurance - great knots = outdoor multi pitching
           msg = "You should be an Outdoor Multi-Pitcher";
+          imglink = "multipitch.jpg";
         } else {
           // outdoor - not scared - endurance - not great at knots = outdoor lead
           msg = "You should be an Outdoor Lead Climber";
+          imglink = "outdoorlead.jfif";
         }
       } else {
         // outdoor bouldering
         msg = "You should be an Outdoor Boulderer";
+        imglink = "outdoorboulder.png";
       }
     }
   }
   document.getElementById("Result").innerHTML = msg;
+  document.getElementById("changedimage").src = imglink;
 }
