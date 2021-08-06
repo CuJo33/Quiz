@@ -75,10 +75,10 @@ function calculateResults() {
       imglink = "indoorbouldering.jpg";
     } else if (AnswerArray[3] == 1) {
       //Indoor - Not scared - speed = Speed climbing
-      msg = "You should be an Speed Climber";
+      msg = "You should be a Speed Climber";
       imglink = "indoorspeed.jpg";
     } else if (AnswerArray[3] == 2) {
-      msg = "You should be an Lead Climber";
+      msg = "You should be an Indoor Lead Climber";
       imglink = "indoorlead.jfif";
     } else {
       // Indoor - Not scared - Power = indoor Boulding
