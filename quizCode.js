@@ -21,6 +21,26 @@ function StartQuiz() {
   document.getElementById("Question1").style.display = "inline-block";
 }
 
+/**
+ * Pushes the currently selected radio button through to the answer array
+ */
+function Pushresults(number) {
+  const radios1 = document.querySelectorAll(`input[name="Quest${number}"]`);
+  let Value;
+  for (let rb of radios1) {
+    if (rb.checked) {
+      Value = rb.value;
+      AnswerArray.push(Value);
+      break;
+    }
+  }
+}
+
+// On pressing the next button on a question page,
+// Calls push results with current question number
+// Calls isAnswered() to ask if the amount of answers in the array is equal to the question number, meaning the current question has been answered
+// if answered hide current question and if there is another question to ask display it otherwise call the results.
+
 function ChangeQuestion() {
   Pushresults(QuestionNumber);
   if (isAnwered(AnswerArray, QuestionNumber)) {
@@ -34,7 +54,7 @@ function ChangeQuestion() {
 }
 
 /**
- * hides question 5 shows results
+ * hides question 5 shows results after calulating them
  */
 function Results() {
   calculateResults();
@@ -42,20 +62,9 @@ function Results() {
   document.getElementById("Results").style.display = "inline-block";
 }
 
-/**
- * calculates and displays the results
- */
-function Pushresults(number) {
-  const radios1 = document.querySelectorAll(`input[name="Quest${number}"]`);
-  let Value;
-  for (let rb of radios1) {
-    if (rb.checked) {
-      Value = rb.value;
-      AnswerArray.push(Value);
-      break;
-    }
-  }
-}
+// This is a decison tree for the results
+// its just a big if statement which then sets the variables of msg and imglink
+// which are then called into the document to display the final answer
 
 function calculateResults() {
   if (AnswerArray[2] == 1) {
