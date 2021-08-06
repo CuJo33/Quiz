@@ -1,0 +1,52 @@
+body {
+  text-align: center;
+}
+
+#Question1,
+#Question2,
+#Question3,
+#Question4,
+#Question5,
+#Results {
+  display: none;
+  width: 750px;
+  height: 300px;
+}
+
+#QuizArea {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 500px;
+  width: 800px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.forcehover {
+  height: 200px;
+  width: 200px;
+}
+
+.forcehover:hover {
+  height: 205px;
+  width: 205px;
+}
+
+.height {
+  height: 250px;
+}
+
+#changedimage {
+  height: 200px;
+}
+/* 
+set class for the images
+set at 200 to begin with 
+ccs :hover
+
+nest imagine in the input element will make image clickable. 
+*/

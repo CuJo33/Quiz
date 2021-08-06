@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--required meta-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="Container">
+      <div id="QuizArea">
+        <div id="Title">
+          <div class="col">
+            <h1 class="text-center">What kind of climber are you?</h1>
+            <br />
+          </div>
+        </div>
+
+        <div id="QuestionaireArea">
+          <!--intro content-->
+          <div id="Intro" class="justify-content-center mx-auto">
+            <h2 class="text-center">Find out which type of climber you are</h2>
+            <br />
+            <br />
+            <p class="text-center">Click on Start Quiz below to begin</p>
+            <br />
+            <br />
+            <input
+              type="button"
+              value="Start Quiz"
+              class="btn btn-success text-center"
+              onclick="StartQuiz()"
+            />
+          </div>
+          <form id="quizform">
+            <!--Question 1-->
+            <div id="Question1" class="mx-auto">
+              <div class="row justify-content-center">
+                <h2 class="text-center">What is your body type?</h2>
+              </div>
+              <br />
+              <div class="row justify-content-center height">
+                <div class="col-4 justify-content-center">
+                  <label for="A1">
+                    <img
+                      class="forcehover"
+                      src="1.jpg"
+                      alt="Ectomorph body type"
+                    />
+                    <br />
+                    Ectomorph
+                    <br />
+                    <input
+                      type="radio"
+                      name="Quest1"
+                      id="A1"
+                      class="input-hidden"
+                      value="0"
+                    />
+                  </label>
+                </div>
+                <div class="col-4 justify-content-center">
+                  <label for="A2">
+                    <img
+                      class="forcehover"
+                      src="2.png"
+                      alt="Endomorph body type"
+                    />
+                    <br />
+                    Endomorph
+                    <br />
+                    <input type="radio" name="Quest1" id="A2" value="0" />
+                  </label>
+                </div>
+                <div class="col-4 justify-content-center">
+                  <label for="A3">
+                    <img
+                      class="forcehover"
+                      src="3.png"
+                      alt="Mesomorph body type"
+                    />
+                    <br />
+                    Mesomorph
+                    <br />
+                    <input type="radio" name="Quest1" id="A3" value="0" />
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="row" class="justify-content-center">
+                <input
+                  type="button"
+                  value="Next"
+                  class="btn btn-success mx-auto"
+                  onclick="ChangeQuestion()"
+                />
+              </div>
+            </div>
+
+            <!--Question 2-->
+            <div id="Question2" class="mx-auto">
+              <div class="row justify-content-center">
+                <h2 class="text-center">How do you deal with heights?</h2>
+              </div>
+              <br />
+              <div class="row justify-content-center height">
+                <div class="col justify-content-center">
+                  <label for="A4" class="text-center">
+                    <img
+                      class="forcehover"
+                      src="scared.jpg"
+                      alt="Man looking scared on the top of a building"
+                    />
+                    <br />
+                    I'm Scared
+                    <br />
+                    <input type="radio" name="Quest2" id="A4" value="1" />
+                  </label>
+                </div>
+                <div class="col-6 justify-content-center">
+                  <label for="A5" class="col justify-content-center">
+                    <img
+                      class="forcehover"
+                      src="chill.jpeg"
+                      alt="Man looking relaxed sat on the edge of a building overlooking a city"
+                    />
+                    <br />
+                    I'm Chill
+                    <br />
+                    <input type="radio" name="Quest2" id="A5" value="0" />
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="row" class="justify-content-center">
+                <input
+                  type="button"
+                  value="Next"
+                  class="btn btn-success mx-auto"
+                  onclick="ChangeQuestion()"
+                />
+              </div>
+            </div>
+
+            <!--Question 3-->
+            <div id="Question3" class="mx-auto">
+              <div class="row justify-content-center">
+                <h2 class="text-center">
+                  Do you prefer the Indoors or the Outdoors?
+                </h2>
+              </div>
+              <br />
+              <div class="row justify-content-center height">
+                <div class="col-6 justify-content-center">
+                  <label for="A6" class="text-center">
+                    <img
+                      class="forcehover"
+                      src="indoors.jpg"
+                      alt="A woman in a medatative pose on a kitchen table"
+                    />
+                    <br />
+                    Indoors
+                    <br />
+                    <input type="radio" name="Quest3" id="A6" value="1" />
+                  </label>
+                </div>
+                <div class="col-6 justify-content-center">
+                  <label for="A7">
+                    <img
+                      class="forcehover"
+                      src="Outdoors.jpg"
+                      alt="Man sat outside of a tent in front of a large cliff face with a river running past"
+                    />
+                    <br />
+                    Outdoors
+                    <br />
+                    <input type="radio" name="Quest3" id="A7" value="0" />
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="row" class="justify-content-center">
+                <input
+                  type="button"
+                  value="Next"
+                  class="btn btn-success mx-auto"
+                  onclick="ChangeQuestion()"
+                />
+              </div>
+            </div>
+
+            <!--Question 4-->
+            <div id="Question4" class="mx-auto">
+              <div class="row justify-content-center">
+                <h2 class="text-center">Which do you specalise more in?</h2>
+              </div>
+              <br />
+              <div class="row justify-content-center height">
+                <div class="col-4 justify-content-center">
+                  <label for="A8" class="text-center">
+                    <img
+                      class="forcehover"
+                      src="speed.jpg"
+                      alt="Usain bolt winning the 100m in the olympics"
+                    />
+                    <br />
+                    Speed
+                    <br />
+                    <input type="radio" name="Quest4" id="A8" value="1" />
+                  </label>
+                </div>
+                <div class="col-4 justify-content-center">
+                  <label for="A9">
+                    <img
+                      class="forcehover"
+                      src="endurance.jpg"
+                      alt="The brownlee brothers competing at the olympics in triathlon"
+                    />
+                    <br />
+                    Endurance
+                    <br />
+                    <input type="radio" name="Quest4" id="A9" value="2" />
+                  </label>
+                </div>
+                <div class="col-4 justify-content-center">
+                  <label for="A10">
+                    <img
+                      class="forcehover"
+                      src="power.jpg"
+                      alt="An olympic weightlifter lifting a new WR"
+                    />
+                    <br />
+                    Power
+                    <br />
+                    <input type="radio" name="Quest4" id="A10" value="3" />
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="row" class="justify-content-center">
+                <input
+                  type="button"
+                  value="Next"
+                  class="btn btn-success mx-auto"
+                  onclick="ChangeQuestion()"
+                />
+              </div>
+            </div>
+
+            <!--Question 5-->
+            <div id="Question5" class="mx-auto">
+              <div class="row justify-content-center">
+                <h2 class="text-center">How good are you at tying knots?</h2>
+              </div>
+              <br />
+              <div class="row justify-content-center height">
+                <div class="col-4 justify-content-center">
+                  <label for="A11" class="text-center">
+                    <img
+                      class="forcehover"
+                      src="shoelace.jpg"
+                      alt="A child tying their shoelace"
+                    />
+                    <br />
+                    I can barely tie my shoelaces
+                    <br />
+                    <input type="radio" name="Quest5" id="A11" value="1" />
+                  </label>
+                </div>
+                <div class="col-4 justify-content-center">
+                  <label for="A12">
+                    <img
+                      class="forcehover"
+                      src="ties.jpg"
+                      alt="A compilation of very fancy tie knots"
+                    />
+                    <br />
+                    I can be fancy
+                    <br />
+                    <input type="radio" name="Quest5" id="A12" value="2" />
+                  </label>
+                </div>
+                <div class="col-4 justify-content-center">
+                  <label for="A13">
+                    <img
+                      class="forcehover"
+                      src="military_knots.jpg"
+                      alt="A art display of multiple knots"
+                    />
+                    <br />
+                    I make art from my knots
+                    <br />
+                    <input type="radio" name="Quest5" id="A13" value="3" />
+                  </label>
+                </div>
+              </div>
+              <br />
+              <div class="row" class="justify-content-center">
+                <input
+                  type="button"
+                  value="Next"
+                  class="btn btn-success mx-auto"
+                  onclick="ChangeQuestion()"
+                />
+              </div>
+            </div>
+          </form>
+          <!--Results-->
+          <div id="Results" class="justify-content-center mx-auto">
+            <h2 class="text-center">Your Results</h2>
+            <br /><br />
+            <img
+              id="changedimage"
+              alt="image decipting the type of climber you are"
+            />
+            <br /><br />
+            <p class="text-center" id="Result"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- link to external JavaScript-->
+    <script src="quizCode.js" type="text/javascript"></script>
+  </body>
+</html>
